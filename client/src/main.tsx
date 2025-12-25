@@ -5,7 +5,7 @@ import App from './App'
 import './index.css'
 
 // Replace with your actual Google Client ID from Cloud Console
-const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "171283177008-irua6vahnvjf48feqpcpjenhd5diicpp.apps.googleusercontent.com";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
