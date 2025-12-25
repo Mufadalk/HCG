@@ -1,4 +1,4 @@
-import Database from 'better-sqlite3';
+import Database, { type Database as DatabaseType } from 'better-sqlite3';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const dbPath = path.join(__dirname, '../database.sqlite');
-const db = new Database(dbPath);
+const db: DatabaseType = new Database(dbPath);
 
 // Initialize Database Schema
 export function initDb() {
