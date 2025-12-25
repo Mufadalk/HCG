@@ -4,8 +4,8 @@ import type { Request, Response } from 'express';
 import multer from 'multer';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import db from './db';
-import { generateSignedCard } from './imageService';
+import db from './db.js';
+import { generateSignedCard } from './imageService.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -43,7 +43,7 @@ const requireAuth = async (req: Request, res: Response, next: Function) => {
         return;
     }
 
-    const token = authHeader.split(' ')[1];
+    const token = authHeader.split(' ')[1] || '';
 
     try {
         const ticket = await client.verifyIdToken({
